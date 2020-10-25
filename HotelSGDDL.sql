@@ -73,6 +73,3 @@ FOREIGN KEY fk_ReservationRoom_Room (RoomId)
 FOREIGN KEY fk_ReservationRoom_Reservation (ReservationId)
 	REFERENCES Reservation (ReservationId)
 );
-
-
-
