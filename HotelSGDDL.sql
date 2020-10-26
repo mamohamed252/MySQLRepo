@@ -9,8 +9,8 @@ TypeId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 `Name` VARCHAR(45) NOT NULL,
 StandardOccupancy INT NOT NULL,
 MaximumOccupancy INT NOT NULL,
-BasePrice INT NOT NULL,
-ExtraPersonCharge INT NOT NULL
+BasePrice DECIMAL(5,2) NOT NULL,
+ExtraPersonCharge DECIMAL(4,2) NOT NULL
 );
 
 CREATE TABLE Room (
@@ -56,7 +56,7 @@ ReservationId INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 `Children` INT NOT NULL,
 `StartDate` VARCHAR(45) NOT NULL,
 `EndDate` VARCHAR(45) NOT NULL,
-`TotalRoomCost` INT NOT NULL,
+`TotalRoomCost` DECIMAL(6,2) NOT NULL,
 GuestId INT,
 -- FK GuestId
 FOREIGN KEY fk_Guest (GuestId)
